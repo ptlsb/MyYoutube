@@ -1,0 +1,51 @@
+.yi-container{
+     /* display: flex;  */
+    /* flex-direction:row; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin: 0px,auto;
+    position: relative;
+  margin: 50px 0 45px;
+}
+.yi{
+    padding:0px 50px;
+}
+.player-wrapper{
+    position: relative;
+    padding: 15% 25%;
+    /* margin: 20px; */
+}
+.react-player{
+    /* z-index: -1; */
+    /* width: 100%; */
+    /* height: 100%; */
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+.yi-btn{
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    /* margin: 10px; */
+    /* left: 45%; */
+    width: 20%;
+    align-items: center;
+    background-color: #c00707;
+    color: white;
+    padding: 8px 20px;
+    margin: 6px 0;
+    border: none;
+    /* border-radius: 8px; */
+    cursor: pointer;
+
+}
+@media screen and (max-width: 768px){
+    .yi-btn{
+        width: 40%;
+        left: 30%;
+        padding: 3px 20px;
+        margin: 9px 0;
+    }
+    
+}

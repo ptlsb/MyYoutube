@@ -1,0 +1,15 @@
+.y-container{
+    background: linear-gradient(90deg, rgb(76, 75, 75) 0%, rgb(26, 23, 23) 100%);
+    color: white;
+    padding-bottom: 30px;
+}
+.y-h1{
+    padding: 40px;
+    background-color: black;
+    
+}
+
+.y-h3{
+    padding-top: 7px;
+
+}
