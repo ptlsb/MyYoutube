@@ -6,34 +6,18 @@ import './Footer.css';
 function Footer() {
     return (
         <div className='footer-container'>
-            <section className="footer-subscription">
-                <p className="footer-subscription-heading">
-                    Join the Adventure newsletter  to receive our best vacation deals
-                </p>
-                <p className="footer-subscription-text">
-                    You can unsubscribe at any time.
-                </p>
-                <div className="input-areas">
-                    <form action="">
-                        <input type="email" name="email" placeholder="enter your email" />
-                        <Button buttonStyle="btn--outline">Subscribe</Button>
-                    </form>
-                </div>
-            </section>
+            <div className="outer-layer">
             <div className="footer-links">
                 <div className="footer-link-wrapper">
                     <div className="footer-link-items">
-                        <h2>About Us</h2>
-                        <Link to='/sign-up'>
-                            How it works
-                        </Link>
-                        <Link to='/'>Testimonials</Link>
-                        <Link to='/'>Careers</Link>
-                        <Link to='/'>Investors</Link>
-                        <Link to='/'>Terms of Services</Link>
+                        <h4>Explore</h4>
+                        <Link to='/AboutUs'>About Us</Link>
+                        <Link to='/'>Sitemap</Link>
+                        <Link to='/SignUp'>Sign in</Link>
+                        <Link to='/'>Join Us</Link>
                     </div>
                     <div className="footer-link-items">
-                        <h2>Contact Us</h2>
+                        <h4>Contact Us</h4>
                         <Link to='/'>Contact</Link>
                         <Link to='/'>Support</Link>
                         <Link to='/'>Destinations</Link>
@@ -42,14 +26,14 @@ function Footer() {
                 </div>
                 <div className="footer-link-wrapper">
                     <div className="footer-link-items">
-                        <h2>Videos</h2>
+                        <h4>Videos</h4>
                         <Link to='/'>Submit Videos</Link>
                         <Link to='/'>Ambassadors</Link>
                         <Link to='/'>Agency</Link>
                         <Link to='/'>Influencer</Link>
                     </div>
                     <div className="footer-link-items">
-                        <h2>Social Media</h2>
+                        <h4>Social Media</h4>
                         <Link to='/'>Instagram</Link>
                         <Link to='/'>Facebook</Link>
                         <Link to='/'>Youtube</Link>
@@ -84,6 +68,7 @@ function Footer() {
                     </div>
                 </div>
             </section>
+            </div>
         </div>
     )
 }

@@ -1,18 +1,16 @@
-import React, { useState , useEffect } from 'react'
-import './App.css'
+import React, { useState, useEffect } from "react";
+import "./App.css";
 import Todos from "./components/Todos";
 // import TodoItem from "./components/TodoItem";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Addtodo from "./components/Addtodo";
 import Footer from "./components/Footer";
+import SignUp from "./components/Sign_up/SignUp";
 // import React-player from 'react-player';
 
 function App() {
-
-
-
   let initTodo;
   if (localStorage.getItem("todos") === null) {
     initTodo = [];
@@ -39,22 +37,23 @@ function App() {
     } else {
       sno = todos[todos.length - 1].sno + 1;
     }
-    const len=title.length;
+    const len = title.length;
     let i;
-    let count=0;
-    for(i=0;i<len;i++){
-      if(title[i]=="/"){
+    let count = 0;
+    for (i = 0; i < len; i++) {
+      if (title[i] == "/") {
         count++;
       }
-      if(count==3){
-        if(title[i+1]=='w'){
-          i+=8;
+      if (count == 3) {
+        if (title[i + 1] == "w") {
+          i += 8;
         }
         break;
       }
     }
-    
-    let mystr="https://youtube.com/embed/"+title.substring(i+1,len)+"rel=0";
+
+    let mystr =
+      "https://youtube.com/embed/" + title.substring(i + 1, len) + "rel=0";
     // &showinfo=0&autohide=1
     const mytodo = {
       sno: sno,
@@ -68,34 +67,28 @@ function App() {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
-
-
-
-
   return (
     <>
-    <Router>
-      <Navbar/>
-      <Switch>
-        <Route path='/' exact component={Home} />
-        <Route
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/SignUp" exact component={SignUp} />
+          <Route
             exact
-            path="/services"
+            path="/AddVideo"
             render={() => {
               return (
                 <>
                   <Addtodo addtodo={addtodo} />
                   <Todos todos={todos} onDelete={onDelete} />
-                  <Footer/>
+                  <Footer />
                 </>
               );
             }}
           ></Route>
-      </Switch>
-
-    </Router>
-    
-
+        </Switch>
+      </Router>
     </>
   );
 }

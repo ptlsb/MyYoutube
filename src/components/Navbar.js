@@ -4,6 +4,10 @@ import { Button } from './Button';
 import "./Navbar.css";
 
 function Navbar() {
+
+
+
+
     const [click,setClick]=useState(false);
     const [button,setButton]=useState(true);
 
@@ -41,17 +45,17 @@ function Navbar() {
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
+                    <Link to='/AddVideo' className='nav-links' onClick={closeMobileMenu}>
                         Add Videos
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
-                        Products
+                    <Link to='/AboutUs' className='nav-links' onClick={closeMobileMenu}>
+                        About Us
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
+                    <Link to='/SignUp' className='nav-links-mobile' onClick={closeMobileMenu}>
                         Sign Up
                     </Link>
                 </li>
